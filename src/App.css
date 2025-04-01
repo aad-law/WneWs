@@ -36,3 +36,157 @@
     transform: rotate(360deg);
   }
 }
+/* Base styles */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode-adaptive navbar - Light Mode (default) */
+.mode-adaptive-navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mode-adaptive-navbar .navbar-brand,
+.mode-adaptive-navbar .nav-link {
+  color: #212529;
+}
+
+.mode-adaptive-navbar .navbar-brand:hover,
+.mode-adaptive-navbar .nav-link:hover {
+  color: #0d6efd;
+}
+
+.mode-adaptive-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.mode-adaptive-navbar .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar - Dark Mode */
+body.dark-mode .mode-adaptive-navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .mode-adaptive-navbar .navbar-brand,
+body.dark-mode .mode-adaptive-navbar .nav-link {
+  color: #e0e0e0;
+}
+
+body.dark-mode .mode-adaptive-navbar .navbar-brand:hover,
+body.dark-mode .mode-adaptive-navbar .nav-link:hover {
+  color: #90caf9;
+}
+
+body.dark-mode .mode-adaptive-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body.dark-mode .mode-adaptive-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Card styles for dark mode */
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode .card-footer {
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-mode .btn-dark {
+  background-color: #666;
+  border-color: #777;
+}
+
+body.dark-mode .btn-dark:hover {
+  background-color: #888;
+}
+
+body.dark-mode .text-muted {
+  color: #aaa !important;
+}
+
+/* Form switch styling for dark mode */
+body.dark-mode .form-check-input {
+  background-color: #444;
+  border-color: #666;
+}
+
+body.dark-mode .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Alerts in dark mode */
+body.dark-mode .alert-danger {
+  background-color: #571b1b;
+  color: #f5c6c6;
+  border-color: #772a2a;
+}
+
+  .card, .navbar, .btn, .form-check-input, .alert {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .news-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+/* Responsive grid adjustments */
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 991px) {
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Add this to your dark mode styles */
+body.dark-mode .news-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .news-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
