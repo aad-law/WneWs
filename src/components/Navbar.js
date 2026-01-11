@@ -56,7 +56,7 @@ export class Navbar extends Component {
                 </li>
               </ul>
 
-              {/* 👇 Show DarkModeToggle here on large screens */}
+              {/* 👇 Show DarkModeToggle here on large screens*/}
               <div className="d-none d-lg-block">
                 <DarkModeToggle />
               </div>
