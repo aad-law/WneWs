@@ -182,7 +182,6 @@ body.dark-mode .alert-danger {
   }
 }
 
-/* Add this to your dark mode styles */
 body.dark-mode .news-card {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
